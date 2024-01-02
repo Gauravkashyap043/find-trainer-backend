@@ -50,13 +50,13 @@ export const UserRegisterService = async (
         callBack(user);
         return;
       }
-      if (userMobile && !userMobile.length) {
-        return Helper.throwError(
-          Messages.MOBILE_NOT_EXIST,
-          null,
-          HttpStatuses.CONFLICT
-        );
-      }
+      // if (!userMobile && !userMobile.length) {
+      //   return Helper.throwError(
+      //     Messages.MOBILE_NOT_EXIST,
+      //     null,
+      //     HttpStatuses.CONFLICT
+      //   );
+      // }
       if (userPassword && !userPassword.length) {
         return Helper.throwError(
           Messages.WRONG_PASSWORD,

@@ -7,7 +7,7 @@
     "build": "rimraf dist && tsc && cp -r ./src/assets/ ./dist/assets/",
     "prod-build": "tsc",
     "preserve": "npm run build",
-    "dev": "cross-env NODE_ENV=development concurrently \"tsc --watch\" \"nodemon -q dist/index.js\"",
+    "dev": "nodemon --exec ts-node index.ts",
     "prestart": "npm run build",
     "start": "cross-env NODE_ENV=production node dist/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
